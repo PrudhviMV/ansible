@@ -3,9 +3,9 @@
   connection: local
   become: yes
   vars:
-    COURSE= Devops with AWS
-    Duration= 10hrs
-    Trainer= siva
+    COURSE: Devops with AWS
+    Duration: 10hrs
+    Trainer: siva
   tasks:
     - name: task level variables checking
       ansible.builtin.debug:
