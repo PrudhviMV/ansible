@@ -5,7 +5,7 @@
   vars:
     NAME: from play level
   vars_prompt:
-    - name: input
+    - name: NAME
       prompt: what is your input?
       private: false
   vars_files:
