@@ -4,12 +4,12 @@
   become: yes
   vars:
     NAME: from play level
-  vars_prompt:
-    - name: NAME
-      prompt: what is your input?
-      private: false
-  vars_files:
-    - course.yaml
+  # vars_prompt:
+  #   - name: NAME
+  #     prompt: what is your input?
+  #     private: false
+  # vars_files:
+  #   - course.yaml
 
   tasks:
   - name: checking var preference level
