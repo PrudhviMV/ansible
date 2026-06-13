@@ -10,10 +10,9 @@
   vars_files:
     - course.yaml
 
-    - tasks:
-      - name: checking var preference level
-        vars:
-        - NAME: from play level
-          ansible.builtin.debug:
-            msg: {{ NAME }}  
-
+  -tasks:
+    - name: checking var preference level
+      vars:
+      - NAME: from play level
+        ansible.builtin.debug:
+          msg: {{ NAME }}  
