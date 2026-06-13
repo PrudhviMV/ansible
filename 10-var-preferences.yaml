@@ -10,7 +10,7 @@
   vars_files:
     - course.yaml
 
-  -tasks:
+  tasks:
     - name: checking var preference level
       vars:
       - NAME: from play level
