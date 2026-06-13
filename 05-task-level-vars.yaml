@@ -8,5 +8,7 @@
     Trainer: siva
   tasks:
     - name: task level variables checking
+      vars:
+        COURSE: Ansible
       ansible.builtin.debug:
         msg: "Course is {{ COURSE }}, Duration is {{ Duration }} and Trainer is {{ Trainer }}"
