@@ -7,5 +7,5 @@
 
   tasks:
     - name: play level vars print
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: Course is {{ course }} and Duration is {{ duration }}.
