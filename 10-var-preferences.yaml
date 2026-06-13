@@ -1,0 +1,19 @@
+- name: checking preference for variables
+  hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    - NAME: from play level
+  vars_prompt:
+    - name: input
+      prompt: what is your input?
+  vars_files:
+    - course.yaml
+
+    - tasks:
+      - name: checking var preference level
+        vars:
+        - NAME: from play level
+        ansible.builtin.debug:
+        msg: {{ NAME }}  
+
