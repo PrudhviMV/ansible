@@ -13,6 +13,6 @@
   tasks:
     - name: checking var preference level
       vars:
-      - NAME: from play level
-        ansible.builtin.debug:
-          msg: "{{ NAME }}"  
+      NAME: from play level
+      ansible.builtin.debug:
+        msg: "{{ NAME }}"  
