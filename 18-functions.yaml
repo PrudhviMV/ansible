@@ -18,17 +18,17 @@
     ansible.builtin.debug:
       msg: "Hello, {{ name | default('Ramesh') }}"
 
-  tasks:
+  #tasks:
   - name: split string into list
     ansible.builtin.debug:
       msg: "Technologies are: {{ technologies | split(',') }}"  
 
-  tasks:
+  #tasks:
   - name: convert dcit2 list
     ansible.builtin.debug:
       msg: "{{ tags|dict2items }}"
 
-  tasks:
+  #tasks:
   - name: convert list 2 dict
     ansible.builtin.debug:
       msg: "{{ listTags|items2dict }}"
