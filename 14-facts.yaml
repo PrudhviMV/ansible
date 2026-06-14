@@ -1,0 +1,17 @@
+- name: install pkg based on os
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: install pkg redhat
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+        when: ansible_os_family == "RedHat"
+
+    - name: install package debian
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        when: ansible_os_family == "Debian"
