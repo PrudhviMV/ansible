@@ -1,0 +1,12 @@
+- name: conditions
+  hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    number: 5
+
+  tasks:
+    - name: check given number
+      ansible.builtin.debug:
+        msg: "Given number is {{ number }} less than 10"
+      when: number < 10
