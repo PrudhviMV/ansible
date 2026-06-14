@@ -2,8 +2,15 @@
   hosts: localhost
   connection: local
   become: yes
+  vars:
+    technologies: DevOps, linux, ansible, shell
 
   tasks:
   - name: functions learn
     ansible.builtin.debug:
       msg: "Hello, {{ name | default('Ramesh') }}"
+
+  tasks:
+  - name: split string into list
+    ansible.builtin.debug:
+      msg: "Technologies are: {{ technologies | split(',') }}"    
