@@ -7,6 +7,11 @@
     tags:
       Application: payment
       Environment: dev
+    listTags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
 
   tasks:
   - name: functions learn
@@ -22,3 +27,8 @@
   - name: convert dcit2 list
     ansible.builtin.debug:
       msg: "{{ tags|dict2items }}"
+
+  tasks:
+  - name: convert list 2 dict
+    ansible.builtin.debug:
+      msg: "{{ tags|items2dict }}"
