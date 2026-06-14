@@ -4,6 +4,9 @@
   become: yes
   vars:
     technologies: DevOps, linux, ansible, shell
+    tags:
+      Application: payment
+      Environment: dev
 
   tasks:
   - name: functions learn
@@ -13,4 +16,9 @@
   tasks:
   - name: split string into list
     ansible.builtin.debug:
-      msg: "Technologies are: {{ technologies | split(',') }}"    
+      msg: "Technologies are: {{ technologies | split(',') }}"  
+
+  tasks:
+  - name: convert dcit2 list
+    ansible.builtin.debug:
+      msg: "{{ tags|dict2items }}"
