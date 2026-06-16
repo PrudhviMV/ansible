@@ -78,7 +78,7 @@
       msg: "{{ shell_op }}"
 
   - name: redirect shell 
-    ansible.builtin.shell: ls -ltr > /tmp/op.txt
+    ansible.builtin.command: ls -ltr > /tmp/op.txt
     register: error_test_op
 
   - name: print shell ooop
