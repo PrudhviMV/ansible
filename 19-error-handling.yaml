@@ -15,4 +15,5 @@
 
   - name: check status and create user
     ansible.builtin.command: useradd roboshop
+    ignore_errors: true
     when: user_output != 0
