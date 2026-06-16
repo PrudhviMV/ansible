@@ -49,7 +49,7 @@
 
   - name: Convert lower to upper
     ansible.builtin.debug:
-      msg: "{{ Name | uppercase }}"  
+      msg: "{{ Name | upper }}"  
 
   - name: convert to lower case
     ansible.builtin.debug:
