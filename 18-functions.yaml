@@ -62,5 +62,5 @@
       msg: "{{ ipaddr | ansible.utils.ipv4 }}"
   
   - name: shell vs command
-    ansible.builtin.shell:
+    ansible.builtin.command:
       msg: cat /etc/passwd | grep root
