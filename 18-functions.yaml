@@ -80,6 +80,7 @@
   - name: redirect shell 
     ansible.builtin.command: ls -ltr > /tmp/op.txt
     register: error_test_op
+    ignore_errors: true
 
   - name: print shell ooop
     ansible.builtin.debug:
