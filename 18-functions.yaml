@@ -5,6 +5,7 @@
   vars:
     technologies: DevOps, linux, ansible, shell
     Name: prudhvi
+    gmail: Info@HOTMAIL.COM
     tags:
       Application: payment
       Environment: dev
