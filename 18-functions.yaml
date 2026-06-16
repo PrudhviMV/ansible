@@ -68,3 +68,11 @@
   - name: print o/p
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+
+  - name: redirect shell 
+    ansible.builtin.shell: ls -ltr
+    register: shell_op
+
+  - name: print shell ooop
+    ansible.builtin.debug:
+      msg: "{{ shell_op }}"
