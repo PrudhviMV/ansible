@@ -60,3 +60,7 @@
   - name: check ip address
     ansible.builtin.debug:
       msg: "{{ ipaddr | ansible.utils.ipv4 }}"
+  
+  - name: shell vs command
+    ansible.builtin.shell:
+      msg: cat /etc/passwd | grep root
